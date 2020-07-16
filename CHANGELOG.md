@@ -15,5 +15,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Specify structure of `categories` data
 - Specify structure of `transactions` data
 
-[Unreleased]: https://github.com/forevermatt/budget-data/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/forevermatt/budget-data/compare/1.0.0...develop
 [1.0.0]: https://github.com/forevermatt/budget-data/releases/tag/1.0.0
