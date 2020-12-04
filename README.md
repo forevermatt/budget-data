@@ -51,7 +51,7 @@ A user's list of budget categories:
           "*category uuid*": *amount from this category, in cents*,
           *...*
         },
-        "note": "*optional textual comment about this transaction*"
+        "note": "*optional textual comment about this transaction*",
         "timestamp": *date/time of transaction, as a JavaScript unix timestamp*,
         "who": "*name of payee*"
       },
