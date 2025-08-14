@@ -15,26 +15,17 @@ The list of a user's financial accounts:
       *...*
     ]
 
-### Budget
-
-The amount a user has currently budgeted (per month) for each category:
-
-    {
-      "*category uuid*": {
-        "budgeted": *allotted amount for this month, in cents*,
-        "remaining": *amount remaining in this category*,
-        "refilled": "*YYYY-MM*"
-      },
-      *...*
-    }
-
 ### Categories
 
-A user's list of budget categories:
+A user's list of budget categories, including the amount currently budgeted (per
+month) for each category:
 
     [
       {
+        "budgeted": *allotted amount per month for this category, in cents*,
         "name": "*category name*",
+        "remaining": *amount remaining in this category*,
+        "refilled": "*YYYY-MM*"
         "uuid": "*category uuid*"
       },
       *...*
