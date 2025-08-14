@@ -1,6 +1,17 @@
 # Budget Data
 A data structure specification for budget apps
 
+## A Note about IDs
+
+The IDs for each object (e.g. an Account ID) can be any non-empty identifier
+unique to that list of objects (e.g. Accounts). You can use UUIDs, but that is
+not required.
+
+You are also free to use `_id` rather than `id` as the name of the ID fields, AS
+LONG AS IT IS CLEAR which you are using (i.e. don't have both an `id` field and
+an `_id` field). However, foreign-key fields (such as `accountId`) must use the
+names documented below (i.e. do not use `account_id`).
+
 ## Specification
 
 ### Accounts
@@ -10,7 +21,7 @@ The list of a user's financial accounts:
     [
       {
         "name": "*account name*",
-        "uuid": "*account uuid*"
+        "id": "*account id*"
       },
       *...*
     ]
@@ -26,7 +37,7 @@ month) for each category:
         "name": "*category name*",
         "remaining": *amount remaining in this category*,
         "refilled": "*YYYY-MM*"
-        "uuid": "*category uuid*"
+        "id": "*category id*"
       },
       *...*
     ]
@@ -35,11 +46,11 @@ month) for each category:
 
     [
       {
-        "uuid": "*transaction uuid*",
-        "accountUuid": "*account uuid*",
+        "id": "*transaction id*",
+        "accountId": "*account id*",
         "amountTotal": *transaction total, in cents*,
         "categoryAmounts": {
-          "*category uuid*": *amount from this category, in cents*,
+          "*category id*": *amount from this category, in cents*,
           *...*
         },
         "note": "*optional textual comment about this transaction*",
