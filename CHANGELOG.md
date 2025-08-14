@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Merge `budget` data fields into `categories` data
+- Rename `uuid` fields to `id` (or optionally `_id`)
 
 ## [1.1.0] - 2020-12-03
 ### Added
