@@ -1,6 +1,17 @@
 # Budget Data
 A data structure specification for budget apps
 
+## A Note about IDs
+
+The IDs for each object (e.g. an Account ID) can be any non-empty identifier
+unique to that list of objects (e.g. Accounts). You can use UUIDs, but that is
+not required.
+
+You are also free to use `_id` rather than `id` as the name of each of the ID
+fields, AS LONG AS IT IS CLEAR which you are using (i.e. don't have both an `id`
+field and an `_id` field). However, foreign-key fields (such as `accountId`)
+must use the names documented below (i.e. do not use `account_id`).
+
 ## Specification
 
 ### Accounts
@@ -10,32 +21,23 @@ The list of a user's financial accounts:
     [
       {
         "name": "*account name*",
-        "uuid": "*account uuid*"
+        "id": "*account id*"
       },
       *...*
     ]
 
-### Budget
-
-The amount a user has currently budgeted (per month) for each category:
-
-    {
-      "*category uuid*": {
-        "budgeted": *allotted amount for this month, in cents*,
-        "remaining": *amount remaining in this category*,
-        "refilled": "*YYYY-MM*"
-      },
-      *...*
-    }
-
 ### Categories
 
-A user's list of budget categories:
+A user's list of budget categories, including the amount currently budgeted (per
+month) for each category:
 
     [
       {
+        "budgeted": *allotted amount per month for this category, in cents*,
         "name": "*category name*",
-        "uuid": "*category uuid*"
+        "remaining": *amount remaining in this category*,
+        "refilled": "*YYYY-MM*"
+        "id": "*category id*"
       },
       *...*
     ]
@@ -44,11 +46,11 @@ A user's list of budget categories:
 
     [
       {
-        "uuid": "*transaction uuid*",
-        "accountUuid": "*account uuid*",
+        "id": "*transaction id*",
+        "accountId": "*account id*",
         "amountTotal": *transaction total, in cents*,
         "categoryAmounts": {
-          "*category uuid*": *amount from this category, in cents*,
+          "*category id*": *amount from this category, in cents*,
           *...*
         },
         "note": "*optional textual comment about this transaction*",
