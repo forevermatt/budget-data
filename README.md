@@ -7,10 +7,10 @@ The IDs for each object (e.g. an Account ID) can be any non-empty identifier
 unique to that list of objects (e.g. Accounts). You can use UUIDs, but that is
 not required.
 
-You are also free to use `_id` rather than `id` as the name of the ID fields, AS
-LONG AS IT IS CLEAR which you are using (i.e. don't have both an `id` field and
-an `_id` field). However, foreign-key fields (such as `accountId`) must use the
-names documented below (i.e. do not use `account_id`).
+You are also free to use `_id` rather than `id` as the name of each of the ID
+fields, AS LONG AS IT IS CLEAR which you are using (i.e. don't have both an `id`
+field and an `_id` field). However, foreign-key fields (such as `accountId`)
+must use the names documented below (i.e. do not use `account_id`).
 
 ## Specification
 
