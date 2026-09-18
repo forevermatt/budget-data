@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-09-18
+### Added
+- Add "Recurring Transactions" record type specification
+
+### Fixed
+- Use JSON syntax highlighting for record-type specifications
+
 ## [2.0.0] - 2025-08-15
 ### Removed
 - Remove `budget` data as a separate list
@@ -25,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Specify structure of `categories` data
 - Specify structure of `transactions` data
 
-[Unreleased]: https://github.com/forevermatt/budget-data/compare/2.0.0...develop
+[Unreleased]: https://github.com/forevermatt/budget-data/compare/2.1.0...develop
+[2.1.0]: https://github.com/forevermatt/budget-data/releases/tag/2.1.0
 [2.0.0]: https://github.com/forevermatt/budget-data/releases/tag/2.0.0
 [1.1.0]: https://github.com/forevermatt/budget-data/releases/tag/1.1.0
 [1.0.0]: https://github.com/forevermatt/budget-data/releases/tag/1.0.0
