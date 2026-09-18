@@ -18,44 +18,50 @@ must use the names documented below (i.e. do not use `account_id`).
 
 The list of a user's financial accounts:
 
-    [
-      {
-        "name": "*account name*",
-        "id": "*account id*"
-      },
-      *...*
-    ]
+```json
+[
+  {
+    "name": "*account name*",
+    "id": "*account id*"
+  },
+  *...*
+]
+```
 
 ### Categories
 
 A user's list of budget categories, including the amount currently budgeted (per
 month) for each category:
 
-    [
-      {
-        "budgeted": *allotted amount per month for this category, in cents*,
-        "name": "*category name*",
-        "remaining": *amount remaining in this category*,
-        "refilled": "*YYYY-MM*"
-        "id": "*category id*"
-      },
-      *...*
-    ]
+```json
+[
+  {
+    "budgeted": *allotted amount per month for this category, in cents*,
+    "name": "*category name*",
+    "remaining": *amount remaining in this category*,
+    "refilled": "*YYYY-MM*"
+    "id": "*category id*"
+  },
+  *...*
+]
+```
 
 ### Transactions
 
-    [
-      {
-        "id": "*transaction id*",
-        "accountId": "*account id*",
-        "amountTotal": *transaction total, in cents*,
-        "categoryAmounts": {
-          "*category id*": *amount from this category, in cents*,
-          *...*
-        },
-        "note": "*optional textual comment about this transaction*",
-        "timestamp": *date/time of transaction, as a JavaScript unix timestamp*,
-        "who": "*name of payee*"
-      },
+```json
+[
+  {
+    "id": "*transaction id*",
+    "accountId": "*account id*",
+    "amountTotal": *transaction total, in cents*,
+    "categoryAmounts": {
+      "*category id*": *amount from this category, in cents*,
       *...*
-    ]
+    },
+    "note": "*optional textual comment about this transaction*",
+    "timestamp": *date/time of transaction, as a JavaScript unix timestamp*,
+    "who": "*name of payee*"
+  },
+  *...*
+]
+```
