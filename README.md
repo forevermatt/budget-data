@@ -65,3 +65,24 @@ month) for each category:
   *...*
 ]
 ```
+
+### Recurring Transactions
+
+```json
+[
+  {
+    "id": "*recurring transaction id*",
+    "accountId": "*account id*",
+    "amountTotal": *transaction total, in cents*,
+    "categoryAmounts": {
+      "*category id*": *amount from this category, in cents*,
+      *...*
+    },
+    "nextDue": "*YYYY-MM-DD, the next date this is to be recorded*",
+    "note": "*optional textual comment about this transaction, to be included on each transaction created from this recurring transaction*",
+    "recurs": "*how often it repeats; only 'monthly' so far*",
+    "who": "*name of payee*"
+  },
+  *...*
+]
+```
