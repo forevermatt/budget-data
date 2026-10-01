@@ -38,8 +38,8 @@ month) for each category:
   {
     "budgeted": *allotted amount per month for this category, in cents*,
     "name": "*category name*",
-    "remaining": *amount remaining in this category*,
-    "refilled": "*YYYY-MM*"
+    "remaining": *amount remaining in this category, in cents*,
+    "refilled": "*YYYY-MM*",
     "id": "*category id*"
   },
   *...*
@@ -52,7 +52,7 @@ month) for each category:
 [
   {
     "id": "*transaction id*",
-    "accountId": "*account id*",
+    "accountId": "*account id; omitted if not tied to an account*",
     "amountTotal": *transaction total, in cents*,
     "categoryAmounts": {
       "*category id*": *amount from this category, in cents*,
@@ -65,6 +65,14 @@ month) for each category:
   *...*
 ]
 ```
+
+A positive amount is money taken out of a category, such as an expense. A
+negative amount is money put into a category, such as its monthly refill, so
+a refill of $50 has an `amountTotal` of `-5000` and a category amount of
+`-5000`.
+
+A transaction that does not involve an account, such as a refill, has no
+`accountId` field.
 
 ### Recurring Transactions
 
