@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2026-10-01
+### Changed
+- Omit a transaction's `accountId` when it is not tied to an account
+
+### Added
+- Define negative transaction amounts as money put into a category
+
+### Fixed
+- Add the missing comma after a category's `refilled` field
+- Say that a category's `remaining` amount is in cents
+
 ## [2.1.0] - 2026-09-18
 ### Added
 - Add "Recurring Transactions" record type specification
@@ -32,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Specify structure of `categories` data
 - Specify structure of `transactions` data
 
-[Unreleased]: https://github.com/forevermatt/budget-data/compare/2.1.0...develop
+[Unreleased]: https://github.com/forevermatt/budget-data/compare/3.0.0...develop
+[3.0.0]: https://github.com/forevermatt/budget-data/releases/tag/3.0.0
 [2.1.0]: https://github.com/forevermatt/budget-data/releases/tag/2.1.0
 [2.0.0]: https://github.com/forevermatt/budget-data/releases/tag/2.0.0
 [1.1.0]: https://github.com/forevermatt/budget-data/releases/tag/1.1.0
