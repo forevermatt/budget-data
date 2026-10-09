@@ -38,13 +38,15 @@ month) for each category:
   {
     "budgeted": *allotted amount per month for this category, in cents*,
     "name": "*category name*",
-    "remaining": *amount remaining in this category, in cents*,
     "refilled": "*YYYY-MM*",
     "id": "*category id*"
   },
   *...*
 ]
 ```
+
+A category's balance is not stored. It is the negated sum of the category's
+amounts across all transactions, so expenses lower it and refills raise it.
 
 ### Transactions
 

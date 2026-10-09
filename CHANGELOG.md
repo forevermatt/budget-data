@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.0] - 2026-10-09
+### Removed
+- Remove a category's `remaining` amount
+
+### Added
+- Define a category's balance as the negated sum of its transaction amounts
+
 ## [3.0.0] - 2026-10-01
 ### Changed
 - Omit a transaction's `accountId` when it is not tied to an account
@@ -43,7 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Specify structure of `categories` data
 - Specify structure of `transactions` data
 
-[Unreleased]: https://github.com/forevermatt/budget-data/compare/3.0.0...develop
+[Unreleased]: https://github.com/forevermatt/budget-data/compare/4.0.0...develop
+[4.0.0]: https://github.com/forevermatt/budget-data/releases/tag/4.0.0
 [3.0.0]: https://github.com/forevermatt/budget-data/releases/tag/3.0.0
 [2.1.0]: https://github.com/forevermatt/budget-data/releases/tag/2.1.0
 [2.0.0]: https://github.com/forevermatt/budget-data/releases/tag/2.0.0
